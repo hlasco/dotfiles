@@ -1,0 +1,10 @@
+alias q="exit"
+alias c="clear"
+alias h="history"
+alias lsa="ls -a"
+alias pd="pwd"
+alias t="time"
+alias home="cd ~"
+alias ..='cd ..'
+alias ...='cd ..; cd ..'
+alias ....='cd ..; cd ..; cd ..'
