@@ -40,6 +40,14 @@ local plugins = {
 
   -- Install a plugin
   {
+    "nvim-telescope/telescope-file-browser.nvim",
+    lazy = false,
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    config = function()
+      require("telescope").load_extension("file_browser")
+    end,
+  },
+  {
     "max397574/better-escape.nvim",
     event = "InsertEnter",
     config = function()
@@ -70,7 +78,18 @@ local plugins = {
       require('hop').setup()
     end
   },
-
+  {
+  "ahmedkhalf/project.nvim",
+  lazy = false,
+  config = function()
+    require("project_nvim").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+    require('telescope').load_extension('projects')
+  end,
+}
 
   -- To make a plugin not be loaded
   -- {
